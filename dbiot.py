@@ -17,10 +17,10 @@ client = MongoClient()
 def db_conexion():
     try:
 
-        client = MongoClient('')
+        client = MongoClient('mongodb+srv://elisa:mongoRojo@cluster0.qwbcqpm.mongodb.net')
         #el cliente se conecta a la base de datos dbiot
-        #db = client['dbiot']
-        db = client['PRACTICA']
+        db = client['dbiot']
+        #db = client['PRACTICA']
 
     except ConnectionError:
         print("Error al conectar a la bd")

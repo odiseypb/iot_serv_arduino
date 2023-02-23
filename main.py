@@ -16,11 +16,11 @@ app = Flask(__name__)
 def inicio():
     sensores = db['sensores']
     sensoresReceived = sensores.find()
-    print(sensoresReceived)
+    print(type(sensoresReceived))
     for sensor in sensoresReceived:
         print(sensor.get("sensor"))
         print(sensor["sensor"])
-    return render_template("index.html", sensores = sensoresReceived)
+    return render_template("consultasensor.html", sensores = sensoresReceived)
 
 @app.route("/sensor",methods=["POST"])
 def sensor():
