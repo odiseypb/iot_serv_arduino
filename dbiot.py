@@ -17,7 +17,7 @@ client = MongoClient()
 def db_conexion():
     try:
 
-        client = MongoClient('mongodb+srv://elisa:mongoRojo@cluster0.qwbcqpm.mongodb.net')
+        client = MongoClient('aqui va el nombre del servidor al que te conectas')
         #el cliente se conecta a la base de datos dbiot
         db = client['dbiot']
         #db = client['PRACTICA']
