@@ -13,7 +13,7 @@
 const char* ssid = "who";
 const char* password = "87654320";
 //declarar la ip del servidor Web (La que nos va a dar flask)
-const char* server_address = "http://172.16.26.157:8090/sensor";
+const char* server_address = "http://192.11.21.47:8090/sensor";
 
 void setup() {
   /*Inicia la velocidad de transmisión de datos 115200 bits
