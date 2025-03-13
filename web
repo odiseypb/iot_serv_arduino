@@ -1,0 +1,21 @@
+from flask import Flask, render_template, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/', methods=['GET','POST'])
+def index():
+    if request.method == 'POST':
+        data = request.get_json()
+        if data.status_code == 200:
+            nombre_sensor= data["sensor"]
+            valor_sensor= data["valor"]
+            return jsonify({"msg": "Registro Exitoso","data":data})
+        else:
+            return jsonify({"msg": "Error", "status_code": data.status_code})
+    else:
+        render_template("index.html")
+
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0',port=5000)
